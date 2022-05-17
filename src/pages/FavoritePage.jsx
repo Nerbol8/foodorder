@@ -57,7 +57,7 @@ const FavoritePage = () => {
                   <TableCell align="center">
                     <img width={100} src={item.product.image} alt="" />
                   </TableCell>
-                  <TableCell align="center">{item.product.price} сом</TableCell>
+                  <TableCell align="center">$ {item.product.price} </TableCell>
                   <TableCell align="center">
                     <input
                       min={1}
@@ -71,7 +71,7 @@ const FavoritePage = () => {
                       value={item.count}
                     />
                   </TableCell>
-                  <TableCell align="center">{item.subPrice} $</TableCell>
+                  <TableCell align="center">$ {item.subPrice} </TableCell>
                 </TableRow>
               ))}
             </TableBody>
@@ -81,7 +81,7 @@ const FavoritePage = () => {
                   <h2>Total price</h2>
                 </TableCell>
                 <TableCell align="center">
-                  <h2>{myFavorite.totalPrice} $</h2>
+                  <h2>$ {myFavorite.totalPrice} </h2>
                 </TableCell>
               </TableRow>
             </TableFooter>

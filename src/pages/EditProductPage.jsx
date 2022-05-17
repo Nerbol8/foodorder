@@ -55,14 +55,14 @@ const EditProductPage = () => {
   return (
     <Container>
       <div className="add-edit-page">
-        <h2>Редактировать товар</h2>
+        <h2>Edit product</h2>
         <form onSubmit={handleSubmit}>
           <TextField
             onChange={(e) =>
               setEditedProduct({ ...editedProduct, name: e.target.value })
             }
             value={editedProduct.name}
-            label="Введите название"
+            label="name"
             variant="standard"
           />
           <TextField
@@ -70,7 +70,7 @@ const EditProductPage = () => {
               setEditedProduct({ ...editedProduct, desc: e.target.value })
             }
             value={editedProduct.desc}
-            label="Введите описание"
+            label="description"
             variant="standard"
           />
           <TextField
@@ -82,7 +82,7 @@ const EditProductPage = () => {
               })
             }
             value={editedProduct.price}
-            label="Введите цену"
+            label="price"
             variant="standard"
           />
           <TextField
@@ -90,7 +90,7 @@ const EditProductPage = () => {
               setEditedProduct({ ...editedProduct, image: e.target.value })
             }
             value={editedProduct.image}
-            label="Введите фото"
+            label="photo"
             variant="standard"
           />
           <FormControl variant="standard">

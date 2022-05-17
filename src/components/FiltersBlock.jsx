@@ -33,7 +33,7 @@ const FiltersBlock = ({ getProducts }) => {
     setSearchValue("");
     setRoastValue("");
     setSizeValue("");
-    navigate("/");
+    navigate("/h");
     getProducts();
   };
 
@@ -44,7 +44,7 @@ const FiltersBlock = ({ getProducts }) => {
         value={searchValue}
         onChange={(e) => handleFilters("q", e.target.value)}
         type="search"
-        label="Живой поиск"
+        label="live search"
       />
       <FormControl variant="standard">
         <InputLabel id="color-label">roast </InputLabel>

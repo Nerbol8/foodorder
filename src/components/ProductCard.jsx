@@ -54,7 +54,7 @@ export default function ProductCard({ item }) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <Link to={`/details/${item.id}`}>
-        <CardHeader title={item.name} subheader={`${item.price} сом`} />
+        <CardHeader title={item.name} subheader={`$ ${item.price} `} />
       </Link>
       <CardMedia
         className="product-card-image"

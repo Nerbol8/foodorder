@@ -52,14 +52,14 @@ const AddProductPage = () => {
   return (
     <Container>
       <div className="add-edit-page">
-        <h1>Добавить товар</h1>
+        <h1>Add product</h1>
         <form onSubmit={handleSubmit}>
           <TextField
             onChange={(e) =>
               setNewProduct({ ...newProduct, name: e.target.value })
             }
             value={newProduct.name}
-            label="Введите название"
+            label="name"
             variant="standard"
           />
           <TextField
@@ -67,7 +67,7 @@ const AddProductPage = () => {
               setNewProduct({ ...newProduct, desc: e.target.value })
             }
             value={newProduct.desc}
-            label="Введите описание"
+            label="description"
             variant="standard"
           />
           <TextField
@@ -76,7 +76,7 @@ const AddProductPage = () => {
               setNewProduct({ ...newProduct, price: parseInt(e.target.value) })
             }
             value={newProduct.price}
-            label="Введите цену"
+            label="price"
             variant="standard"
           />
           <TextField
@@ -84,7 +84,7 @@ const AddProductPage = () => {
               setNewProduct({ ...newProduct, image: e.target.value })
             }
             value={newProduct.image}
-            label="Вставьте фото"
+            label="photo"
             variant="standard"
           />
           <FormControl variant="standard">
@@ -94,15 +94,15 @@ const AddProductPage = () => {
                 setNewProduct({ ...newProduct, roasting: e.target.value })
               }
               value={newProduct.roasting}
-              label="Выберите цвет"
+              label="roast"
               labelId="color-select-label"
             >
-              <MenuItem value="black">not</MenuItem>
-              <MenuItem value="white">rare</MenuItem>
-              <MenuItem value="blue">medium rare</MenuItem>
-              <MenuItem value="pink">medium</MenuItem>
-              <MenuItem value="yellow">medium well</MenuItem>
-              <MenuItem value="red">well done</MenuItem>
+              <MenuItem value="not">not</MenuItem>
+              <MenuItem value="rare">rare</MenuItem>
+              <MenuItem value="medium rare">medium rare</MenuItem>
+              <MenuItem value="medium">medium</MenuItem>
+              <MenuItem value="medium well">medium well</MenuItem>
+              <MenuItem value="well done">well done</MenuItem>
             </Select>
           </FormControl>
 
@@ -113,7 +113,7 @@ const AddProductPage = () => {
                 setNewProduct({ ...newProduct, size: e.target.value })
               }
               value={newProduct.size}
-              label="Выберите размер"
+              label="size"
               labelId="size-select-label"
             >
               <MenuItem value="s">0.5</MenuItem>

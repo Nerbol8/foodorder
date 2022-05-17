@@ -39,7 +39,7 @@ const AdminContext = (props) => {
     dispatch(action);
   };
 
-  const saveEditedPruduct = async (editedProduct) => {
+  const saveEditedProduct = async (editedProduct) => {
     await axios.patch(`${API}/${editedProduct.id}`, editedProduct);
   };
   const deleteProduct = async (id) => {
@@ -62,7 +62,7 @@ const AdminContext = (props) => {
         addProduct: addProduct,
         getProducts: getProducts,
         getProductsToEdit: getProductsToEdit,
-        saveEditedPruduct: saveEditedPruduct,
+        saveEditedProduct: saveEditedProduct,
         deleteProduct: deleteProduct,
         products: state.products,
         productToEdit: state.productToEdit,
