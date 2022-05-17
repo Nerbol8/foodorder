@@ -10,6 +10,8 @@ import Avatar from "../img/avatar.png";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../context/StateProvider";
 import { actionType } from "../context/reducer";
+import { Button } from "@mui/material";
+import HomePage from "../pages/HomePage";
 
 const Header = () => {
   const firebaseAuth = getAuth(app);
@@ -68,7 +70,13 @@ const Header = () => {
             className="flex items-center gap-24 "
           >
             <li className="text-lg text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
-              Home
+              <div className="product-buy">
+                <Link to="/h">
+                  <Button onClick={HomePage} type="submit">
+                    Home
+                  </Button>
+                </Link>
+              </div>
             </li>
             <li className="text-lg text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
               Menu
